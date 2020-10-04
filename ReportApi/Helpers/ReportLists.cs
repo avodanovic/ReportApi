@@ -1,12 +1,13 @@
 ﻿using Report.Data.Dtos;
+using ReportApi.Contracts;
 using System;
 using System.Collections.Generic;
 
 namespace ReportApi.Helpers
 {
-    public class ReportLists
+    public class ReportLists : IReportLists
     {
-        public static object GetReportList(string reportName)
+        public object GetReportList(string reportName)
         {
             if (reportName.Equals("UserDetails", StringComparison.InvariantCultureIgnoreCase))
             {

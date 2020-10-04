@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ReportApi.Contracts;
+using ReportApi.Helpers;
 using ReportApi.Services;
 
 namespace ReportApi
@@ -23,6 +24,7 @@ namespace ReportApi
             services.AddControllers();
 
             services.AddScoped<IReportService, ReportService>();
+            services.AddScoped<IReportLists, ReportLists>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

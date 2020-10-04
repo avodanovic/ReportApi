@@ -9,7 +9,7 @@ namespace ReportApi.Helpers
     {
         public object GetReportList(string reportName)
         {
-            if (reportName.Equals("UserDetails", StringComparison.InvariantCultureIgnoreCase))
+            if (reportName.Equals(nameof(ReportNames.UserDetails), StringComparison.InvariantCultureIgnoreCase))
             {
                 var userList = new List<UserDto>();
                 for (int i = 0; i < 1000; i++)
@@ -24,7 +24,7 @@ namespace ReportApi.Helpers
                 }
                 return userList;
             }
-            else if (reportName.Equals("Companies", StringComparison.InvariantCultureIgnoreCase))
+            else if (reportName.Equals(nameof(ReportNames.Companies), StringComparison.InvariantCultureIgnoreCase))
             {
                 var companies = new List<CompanyDto>();
                 for (int i = 0; i < 100; i++)
